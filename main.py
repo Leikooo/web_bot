@@ -41,10 +41,10 @@ async def answer(webAppMes):
    await bot.send_message(webAppMes.chat.id, f"Спасибо за обратную связь:\n\nВаша страна: {mes['country']}\nВаша удица: {mes['street']}")
 # answerWebAppQuery
 # SentWebAppMessage 
+
 @app.route('/web-data', methods=['POST'])
 def result():
    print(request)
 
 if __name__ == "__main__":
-    app.run()
     executor.start_polling(dp) 
